@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1fe413dc-8a09-4103-8e02-cb80cd9efee1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/przepisy" afterPath="$PROJECT_DIR$/przepisy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/recipes/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/recipes/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/recipes/index.html.erb" afterPath="$PROJECT_DIR$/app/views/recipes/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/recipes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/recipes_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/recipes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/recipes/show.html.erb" />
     </list>
     <ignored path="przepisy.iws" />
     <ignored path=".idea/workspace.xml" />
