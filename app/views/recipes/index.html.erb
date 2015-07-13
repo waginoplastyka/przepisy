@@ -1,1 +1,5 @@
-<h1>To jest plejsholder</h1>
+<% @recipe.each do |recipe| %>
+<h2>
+  <%= link_to recipe.nazwa, recipe %>
+</h2>
+<% end %>
