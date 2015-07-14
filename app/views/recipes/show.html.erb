@@ -1,10 +1,50 @@
-<%= image_tag @recipe.image.url(:medium, class: 'recipe_image') %>
-<h1>
-  <%= @recipe.nazwa %>
-</h1>
-<p>
-  <%= @recipe.opis %>
-</p>
-<%= link_to "Powrót", root_path, class: 'btn btn-default' %>
-<%= link_to "Edytuj", edit_recipe_path, class: 'btn btn-default' %>
-<%= link_to "Usuń", recipe_path, method: :delete, data: { confirm: "Na pewno?" }, class: 'btn btn-default' %>
+<div class="main_content">
+  <div class="recipe_top row">
+    <div class="col-md-4">
+      <%= image_tag @recipe.image.url(:medium, class: 'recipe_image') %>
+    </div>
+    <div class="col-md-8">
+        <div class="recipe_info">
+          <h1>
+            <%= @recipe.nazwa %>
+          </h1>
+          <p>
+            <%= @recipe.opis %>
+          </p>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="ingredients">
+      <h2> Składniki</h2>
+      <ul>
+        <% @recipe.ingredients.each do |ingredient| %>
+        <li>
+          <%= ingredient.nazwa %>
+        </li>
+            <% end %>
+      </ul>
+    </div>
+  </div>
+            <div class="col-md-6">
+              <div class="directions">
+                <h2> Sposób przygotowania</h2>
+                <ul>
+                  <% @recipe.directions.each do |direction| %>
+                      <li>
+                        <%= direction.krok %>
+                      </li>
+                      <% end %>
+                      </ul>
+                      </div>
+                      </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to "Powrót", root_path, class: 'btn btn-default' %>
+    <%= link_to "Edytuj", edit_recipe_path, class: 'btn btn-default' %>
+    <%= link_to "Usuń", recipe_path, method: :delete, data: { confirm: "Na pewno?" }, class: 'btn btn-default' %>
+  </div>
+</div>
