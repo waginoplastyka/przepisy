@@ -1,0 +1,27 @@
+<h2>Edytuj <%= resource_name.to_s.humanize %></h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Czekamy na potwierdzenie od: <%= resource.unconfirmed_email %></p>
+    <% end %>
+
+    <%= f.input :password, autocomplete: "wyłącz", hint: "zostaw to pole puste, jeśli nie chcesz nic zmieniać", required: false %>
+    <%= f.input :password_confirmation, required: false %>
+    <%= f.input :current_password, hint: "wpisz aktualne hasło", required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Aktualizuj" %>
+  </div>
+<% end %>
+
+<h3>Usuń konto</h3>
+
+<p>Nie podoba się aplikacja? <%= link_to "Usuń konto", registration_path(resource_name), data: { confirm: "Na pewno?" }, method: :delete %></p>
+
+<%= link_to "Powrót", :back %>
