@@ -19,20 +19,21 @@
   <%= f.input :opis, input_html: { class: 'form-control' } %>
   <%= f.input :image, input_html: { class: 'form-control' } %>
   <div class="row">
-    <div class="col-md-6"
+    <div class="col-md-6">
     <h3>Składniki</h3>
     <div class="Składniki">
       <%= f.simple_fields_for :ingredients do |ingredient| %>
           <%= render 'ingredient_fields', f: ingredient %>
       <% end %>
       <div class="links">
-        <%= link_to_add_association "Dodaj składnik", f, :ingredients, class: "btn btn-default add-button" %>
+        <%= link_to_add_association 'Dodaj składnik', f, :ingredients, class: "btn btn-default add-button" %>
       </div>
     </div>
   </div>
 
 
-    <div class="col-md-6"
+
+    <div class="col-md-6">
     <h3>Sposób przygotowania</h3>
     <div class="Kroki">
       <%= f.simple_fields_for :directions do |direction| %>
@@ -42,8 +43,9 @@
         <%= link_to_add_association "Dodaj krok", f, :directions, class: "btn btn-default add-button" %>
       </div>
     </div>
+      </div>
 
 </div>
   <%= f.button :submit, class: 'btn btn-primary' %>
-
+</div>
 <% end %>
