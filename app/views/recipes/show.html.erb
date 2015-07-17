@@ -8,11 +8,11 @@
           <h1>
             <%= @recipe.nazwa %>
           </h1>
+          <h4>
+            Dodany przez <%= @recipe.user.username %>
+          </h4>
           <p>
             <%= @recipe.opis %>
-          </p>
-          <p>
-            Dodany przez
           </p>
         </div>
     </div>
