@@ -10,7 +10,36 @@
 
 <%= yield %>
 
-<%= render 'navbar' %>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Gastro-SIG</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/recipes/new"><span class="glyphicon glyphicon-plus"></span> Dodaj przepis</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Jeszcze nie wiem</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a>Używasz serwisu jako <%=  %></a></li>
+        <li><%= link_to "Zarejestruj się", root_path %></li>
+        <li><%= link_to "Zaloguj się", root_path %></li>
+        <li><%= link_to "Wyloguj się", root_path %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: "alert" %>
+      <% end %>
+</div>
 
 </body>
 </html>
