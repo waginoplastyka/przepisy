@@ -14,15 +14,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@mixin box-shadow {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.09);
-  -moz-box-shadow: rgba(0, 0, 0, 0.09);
-  box-shadow: rgba(0, 0, 0, 0.09);
-}
-
 body {
   padding-top: 70px;
-  background: darkgoldenrod;
+  background: lightseagreen;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 5px;
@@ -34,44 +28,42 @@ body {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  border-radius: 5px;
-  @include box-shadow;
+  border-radius: 15px;
+  box-shadow: 8px 8px 8px #888888;
   background: white;
   font-weight: bold;
 }
 .navbar {
   margin-bottom: 50px;
-  @include box-shadow;
   border: none;
+  b {
+    font-weight: bold;
+  }
   .navbar-brand {
     text-transform: uppercase;
-    letter-spacing: -1px;
     font-weight: bold;
     font-size: 25px;
     a {
-      color: darkgoldenrod;
+      color: lightseagreen;
     }
   }
 }
 .recipe {
   background: white;
-  border-radius: 5px;
+  border-radius: 15px;
   margin-bottom: 40px;
-  @include box-shadow;
+  box-shadow: 8px 8px 8px #888888;
   .image_wrapper {
     max-width: 100%;
-    border-radius: 5px 5px 0 0;
+    border-radius: 15px 15px 0 0;
     overflow: hidden;
   }
   img {
     width: 100%;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    transition: all .3s ease-out;
-    &:hover {
-      transform: scale(1.075);
-    }
+    transition: all .5s ease-out;
+  }
+  img:hover {
+    transform: scale(1.075);
   }
   h2 {
     padding: 15px 5%;
@@ -80,7 +72,7 @@ body {
     font-weight: normal;
     line-height: 1.5;
     a {
-      color: darkgoldenrod;
+      color: lightseagreen;
     }
   }
 }
@@ -89,21 +81,21 @@ body {
 }
 .recipe_info, .ingredients, .directions {
   background: white;
-  @include box-shadow;
-  min-height: 360px;
-  border-radius: 5px;
+  box-shadow: 8px 8px 8px #888888;
+  min-height: 60px;
+  border-radius: 15px;
   padding: 2em 8%;
 }
 .recipe_image {
-  max-width: 100%;
-  border-radius: 5px;
-  @include box-shadow;
+  border-radius: 15px;
+  box-shadow: 8px 8px 8px #888888;
+  overflow: hidden;
 }
 .recipe_info {
   h1 {
     font-size: 36px;
     font-weight: normal;
-    color: darkgoldenrod;
+    color: lightseagreen;
   }
   .description {
     color: #8A8A8A;
@@ -134,4 +126,7 @@ body {
 }
 .add-button {
   margin-top: 25px;
+}
+.nazwa_usera {
+  font-weight: bold;
 }

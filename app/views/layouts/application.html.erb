@@ -25,7 +25,7 @@
         <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Jeszcze nie wiem</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a>Używasz serwisu jako <%= current_user.username %></a></li>
+        <li><a>Używasz serwisu jako<%= current_user.username %></a></li>
         <li><%= link_to "Wyloguj się", destroy_user_session_path, method: :delete %></li>
       </ul>
           <% else %>
